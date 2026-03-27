@@ -53,7 +53,7 @@ const TeamDirectory = () => {
       <div className="top-bar">
         <div className="logo">
           <div className="logo-icon">CN</div>
-          <span>CloudNexus</span>
+          {/* <span>CloudNexus</span> */}
         </div>
         <div className="nav-links">
           <a href="#team" className="active">Team</a>
@@ -64,7 +64,7 @@ const TeamDirectory = () => {
 
       {/* Hero */}
       <div className="hero" id="team">
-        <h1>Know Your Team – CN Beyonders</h1>
+        <h1>Know Your Team – <span className='text-[#00c6ff]'> Beyonders</span></h1>
         <p>People, roles and how to connect.</p>
       </div>
 
@@ -78,7 +78,7 @@ const TeamDirectory = () => {
               <div className="node-name">{ceo.name}</div>
               <div className="node-role">Founder & CEO</div>
             </Link>
-            
+
             <ul>
               {/* Level 2: CTO */}
               <li>
@@ -87,7 +87,7 @@ const TeamDirectory = () => {
                   <div className="node-name">{cto.name}</div>
                   <div className="node-role">CTO</div>
                 </Link>
-                
+
                 <ul>
                   {/* Level 3: TL & RevOps */}
                   <li>
@@ -261,7 +261,7 @@ const TeamDirectory = () => {
           </div>
         </div>
       </div>
-       {/* VISION & MISSION */}
+      {/* VISION & MISSION */}
       <div className="section" id="vision">
         <h2 className="section-title">Our <span>vision &amp; mission</span></h2>
         <div className="vm-grid">

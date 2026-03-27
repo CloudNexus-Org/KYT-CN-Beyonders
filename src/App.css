@@ -1,4 +1,12 @@
 /* ======================== */
+/* ANIMATIONS               */
+/* ======================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================== */
 /* GLOBAL                   */
 /* ======================== */
 .App {
@@ -27,7 +35,7 @@
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: linear-gradient(135deg, #0cf, #06f);
+  background: #00c6ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,19 +74,25 @@
 /* ======================== */
 .hero {
   text-align: center;
-  padding: 48px 20px 10px;
+  padding: clamp(64px, 12vh, 120px) 24px clamp(24px, 5vh, 48px);
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero h1 {
-  font-size: 28px;
+  font-size: clamp(24px, 6vw, 38px);
   font-weight: 600;
+  line-height: 1.1;
   color: #f0f0f0;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
-  font-size: 14px;
-  color: #666;
+  font-size: clamp(14px, 2.5vw, 17px);
+  color: #888;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* ======================== */
@@ -1073,9 +1087,7 @@
     padding: var(--sp-3) var(--sp-4);
   }
 
-  .hero h1 {
-    font-size: 28px;
-  }
+  /* .hero h1 removed as it now uses fluid typography (clamp) */
 
   .features-grid {
     grid-template-columns: 1fr;
